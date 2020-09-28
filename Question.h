@@ -3,6 +3,7 @@
 #include <string>
 #ifndef QUESTION_h
 #define QUESTION_h
+using namespace std;
 
 class Question {
     private :

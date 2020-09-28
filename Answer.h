@@ -2,6 +2,7 @@
 #include <vector>
 #ifndef ANSWER_h
 #define ANSWER_h
+using namespace std;
 
 class Answer {
     private :
