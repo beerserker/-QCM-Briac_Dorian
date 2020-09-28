@@ -18,8 +18,8 @@ void Question::setTitle(string t){
 title = "titre";
 };
 
-bool Answer::getAnswer(){
-return 0;
+vector<Answer> Question::getAnswers(){
+
 };
 
 int Question::addAnswer(){

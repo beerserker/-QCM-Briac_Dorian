@@ -13,7 +13,7 @@ class Question {
         Question(string t);
         string getTitle();
         void setTitle(string t);
-        Answer getAnswer(string a);
+        vector<Answer> getAnswers();
         int addAnswer();
         void removeAnswer(int index);
         ~Question();
