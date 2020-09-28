@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include "Question.h"
+using namespace std;
 
 class QCM {
     private :
