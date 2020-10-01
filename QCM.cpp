@@ -10,24 +10,30 @@ QCM::QCM(string t){
 
 };
 
-string QCM::getTitle(){
-return title;
+
+string QCM::getTitle()
+{
+    return title;
 };
 
-void QCM::setTitle(string t){
-
+void QCM::setTitle(string t)
+{
+    title = t;
 };
 
-Question QCM::setQuestions(string q){
+vector<Question> QCM::getQuestions(){
+return questions;
+}; 
 
+int QCM::addQuestion(Question a)
+{
+    questions.push_back(a);
+    return questions.size();
+    
 };
 
-int QCM::addQuestion(){
-
-};
-
-void removeQuestion(int index){
-
+void QCM::removeQuestion(int index){
+questions.erase(questions.begin()+index);
 };
 
 QCM::~QCM(){

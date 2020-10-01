@@ -14,7 +14,7 @@ class Question {
         string getTitle();
         void setTitle(string t);
         vector<Answer> getAnswers();
-        int addAnswer();
+        int addAnswer(Answer);
         void removeAnswer(int index);
         ~Question();
 };

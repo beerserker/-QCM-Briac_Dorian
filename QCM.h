@@ -1,6 +1,8 @@
 #include <string>
 #include <vector>
 #include "Question.h"
+#ifndef QCM_h
+#define QCM_h
 using namespace std;
 
 class QCM {
@@ -11,9 +13,10 @@ class QCM {
         QCM(string t);
         string getTitle();
         void setTitle(string t);
-        Question setQuestions(string q);
-        int addQuestion();
+        vector<Question> getQuestions();
+        int addQuestion(Question);
         void removeQuestion(int index);
         ~QCM();
 
 };
+#endif

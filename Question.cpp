@@ -5,28 +5,33 @@
 #include "Answer.h"
 using namespace std;
 
+Question::Question(string t)
+{
+    title = t;
+};
+Question::~Question(){}
 
-Question::Question(string t){
+string Question::getTitle()
+{
+    return title;
+};
+
+void Question::setTitle(string t)
+{
     title = t;
 };
 
-string Question::getTitle(){
-return title;
-};
-
-void Question::setTitle(string t){
-title = "titre";
-};
-
 vector<Answer> Question::getAnswers(){
-
+return answers;
 };
 
-int Question::addAnswer(){
+int Question::addAnswer(Answer a)
+{
 
-
+    answers.push_back(a);
+    return answers.size();
 };
 
 void Question::removeAnswer(int index){
-
+answers.erase(answers.begin()+index);
 };
