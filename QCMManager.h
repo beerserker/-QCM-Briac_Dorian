@@ -14,7 +14,7 @@ class QCMManager
 
 
     public :
-    
+    QCMManager();
     bool save(QCM);
     QCM open(string name);
     

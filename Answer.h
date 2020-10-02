@@ -16,7 +16,7 @@ class Answer {
         void setTitle(string t);
         void setIsAnswer(bool IsOrNot);
         bool getIsAnswer();
-        ~Answer();
+        
 
 };
 #endif

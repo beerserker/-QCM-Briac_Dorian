@@ -44,9 +44,9 @@ bool QCMManager::save(QCM quest)
 
 QCM QCMManager::open(string name)
 {
-    QCM qcm;
-    Answer ans;
-    Question quest;
+    QCM qcm();
+    Answer ans();
+    Question quest();
 
     ifstream file("QCM.txt");
     if (file)
