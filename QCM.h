@@ -11,6 +11,7 @@ class QCM {
         vector<Question> questions;
     public :
         QCM(string t);
+        QCM();
         string getTitle();
         void setTitle(string t);
         vector<Question> getQuestions();

@@ -11,6 +11,7 @@ class Question {
         vector<Answer> answers;
     public :
         Question(string t);
+        Question();
         string getTitle();
         void setTitle(string t);
         vector<Answer> getAnswers();

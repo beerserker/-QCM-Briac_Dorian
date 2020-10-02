@@ -40,3 +40,25 @@ bool QCMManager::save(QCM quest)
     }
     return false;
 }
+
+
+QCM QCMManager::open(string name)
+{
+    QCM qcm;
+    Answer ans;
+    Question quest;
+
+    ifstream file("QCM.txt");
+    if (file)
+    {
+        string contenu;
+        getline(file, contenu);
+        cout << contenu;
+        file.close();
+    }
+    else 
+    {
+        cerr << "Erreur, impossible d'ouvrir le fichier !" <<endl;
+    }
+return qcm;
+}

@@ -11,10 +11,12 @@ class Answer {
     public :
         Answer(string title);
         Answer(string t,bool i);
+        Answer();
         string getTitle();
         void setTitle(string t);
         void setIsAnswer(bool IsOrNot);
         bool getIsAnswer();
+        ~Answer();
 
 };
 #endif
