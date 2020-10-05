@@ -33,3 +33,5 @@ bool Answer::getIsAnswer()
 {
         return isAnswer;
 }
+
+Answer::Answer(){};

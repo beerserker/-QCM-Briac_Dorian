@@ -35,3 +35,5 @@ int Question::addAnswer(Answer a)
 void Question::removeAnswer(int index){
 answers.erase(answers.begin()+index);
 };
+
+Question::Question(){};

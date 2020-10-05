@@ -7,13 +7,14 @@ using namespace std;
 
 int main(void)
 {
-    Answer a("titre : reponse 1");
-    Answer a1("titre : reponse 2");
-    Answer a2("titre : reponse 3");
+    Answer a("titre : reponse 1", 0);
+    Answer a1("titre : reponse 2", 1);
+    Answer a2("titre : reponse 3", 0);
     Question Q0("titre : question 0");
     Question Q1("titre : question 1");
     Question Q2("titre : question 2");
     Question Q3("titre : question 3");
+
     Q0.addAnswer(a);
     Q0.addAnswer(a1);
     Q0.addAnswer(a2);
@@ -64,6 +65,7 @@ int main(void)
     QCMManager c;
     qcm.setTitle("de quelle couleur est la peau des ours polaire ?");
     c.save(qcm);
-
+    QCM qcm2 = c.open("QCM.txt");
+    c.save(qcm2);
     return 0;
 }

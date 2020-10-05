@@ -9,7 +9,7 @@ using namespace std;
 QCM::QCM(string t){
 
 };
-
+QCM::QCM(){};
 
 string QCM::getTitle()
 {

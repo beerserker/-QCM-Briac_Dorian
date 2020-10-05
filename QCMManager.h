@@ -11,7 +11,7 @@ class QCMManager
 {
     private :
     string path;
-
+    vector <string> split(string);
 
     public :
     QCMManager();
