@@ -1,0 +1,3 @@
+E:\projects\vendors\cmake\bin\cmake.exe -E rm -f CMakeFiles\Projet_QCM.dir/objects.a
+E:\projects\vendors\mingw64\bin\ar.exe cr CMakeFiles\Projet_QCM.dir/objects.a @CMakeFiles\Projet_QCM.dir\objects1.rsp
+E:\projects\vendors\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Projet_QCM.dir/objects.a -Wl,--no-whole-archive -o Projet_QCM.exe -Wl,--out-implib,libProjet_QCM.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Projet_QCM.dir\linklibs.rsp

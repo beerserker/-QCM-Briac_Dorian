@@ -1,0 +1,37 @@
+[
+{
+  "directory": "E:/projects/-QCM-Briac_Dorian/build",
+  "command": "E:\\projects\\vendors\\mingw64\\bin\\g++.exe  @CMakeFiles/Projet_QCM.dir/includes_CXX.rsp -g -o CMakeFiles\\Projet_QCM.dir\\main.cpp.obj -c E:\\projects\\-QCM-Briac_Dorian\\main.cpp",
+  "file": "E:/projects/-QCM-Briac_Dorian/main.cpp"
+},
+{
+  "directory": "E:/projects/-QCM-Briac_Dorian/build/model",
+  "command": "E:\\projects\\vendors\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\model.dir\\QCM.cpp.obj -c E:\\projects\\-QCM-Briac_Dorian\\model\\QCM.cpp",
+  "file": "E:/projects/-QCM-Briac_Dorian/model/QCM.cpp"
+},
+{
+  "directory": "E:/projects/-QCM-Briac_Dorian/build/model",
+  "command": "E:\\projects\\vendors\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\model.dir\\QCMManager.cpp.obj -c E:\\projects\\-QCM-Briac_Dorian\\model\\QCMManager.cpp",
+  "file": "E:/projects/-QCM-Briac_Dorian/model/QCMManager.cpp"
+},
+{
+  "directory": "E:/projects/-QCM-Briac_Dorian/build/model",
+  "command": "E:\\projects\\vendors\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\model.dir\\QCMForm.cpp.obj -c E:\\projects\\-QCM-Briac_Dorian\\model\\QCMForm.cpp",
+  "file": "E:/projects/-QCM-Briac_Dorian/model/QCMForm.cpp"
+},
+{
+  "directory": "E:/projects/-QCM-Briac_Dorian/build/model",
+  "command": "E:\\projects\\vendors\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\model.dir\\QCMfille.cpp.obj -c E:\\projects\\-QCM-Briac_Dorian\\model\\QCMfille.cpp",
+  "file": "E:/projects/-QCM-Briac_Dorian/model/QCMfille.cpp"
+},
+{
+  "directory": "E:/projects/-QCM-Briac_Dorian/build/model",
+  "command": "E:\\projects\\vendors\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\model.dir\\Question.cpp.obj -c E:\\projects\\-QCM-Briac_Dorian\\model\\Question.cpp",
+  "file": "E:/projects/-QCM-Briac_Dorian/model/Question.cpp"
+},
+{
+  "directory": "E:/projects/-QCM-Briac_Dorian/build/model",
+  "command": "E:\\projects\\vendors\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\model.dir\\Answer.cpp.obj -c E:\\projects\\-QCM-Briac_Dorian\\model\\Answer.cpp",
+  "file": "E:/projects/-QCM-Briac_Dorian/model/Answer.cpp"
+}
+]

@@ -1,0 +1,1 @@
+add_library(model QCM.cpp QCMManager.cpp QCMForm.cpp QCMfille.cpp Question.cpp Answer.cpp)

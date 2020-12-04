@@ -1,0 +1,2 @@
+E:\projects\vendors\mingw64\bin\ar.exe qc libmodel.a CMakeFiles/model.dir/QCM.cpp.obj CMakeFiles/model.dir/QCMManager.cpp.obj CMakeFiles/model.dir/QCMForm.cpp.obj CMakeFiles/model.dir/QCMfille.cpp.obj CMakeFiles/model.dir/Question.cpp.obj CMakeFiles/model.dir/Answer.cpp.obj
+E:\projects\vendors\mingw64\bin\ranlib.exe libmodel.a

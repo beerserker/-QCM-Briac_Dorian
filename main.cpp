@@ -1,13 +1,19 @@
 #include <iostream>
-#include "QCM.h"
+#include <string>
+#include <vector>
 #include "Question.h"
 #include "Answer.h"
+#include "QCM.h"
+#include <fstream>
+#include <sstream>
 #include "QCMManager.h"
+#include <filesystem>	
+#include "QCMfille.h"
 using namespace std;
 
 int main(void)
 {
-    Answer a("titre : reponse 1", 0);
+   /* Answer a("titre : reponse 1", 0);
     Answer a1("titre : reponse 2", 1);
     Answer a2("titre : reponse 3", 0);
     Question Q0("titre : question 0");
@@ -39,7 +45,7 @@ int main(void)
     {
         cout << vans[i].getTitle() << endl;
     }
-    */
+    
     cout << endl;
 
     QCM qcm("QCM");
@@ -53,19 +59,27 @@ int main(void)
         cout << vquest[i].getTitle() << endl;
     }
     cout << endl;
-    /*
+    
     qcm.removeQuestion(1);
     vquest = qcm.getQuestions();
     for (int i = 0; i < vquest.size(); i++)
     {
         cout << vquest[i].getTitle() << endl;
     }
-    */
+    
     cout << endl;
-    QCMManager c;
+    QCMfille c;
     qcm.setTitle("de quelle couleur est la peau des ours polaire ?");
     c.save(qcm);
-    QCM qcm2 = c.open("QCM.txt");
+
+
+//le listing
+    string fichier="OURS.txt";
+    c.setpath(fichier);
+    QCM qcm2 = c.open();
     c.save(qcm2);
+ */
+    QCMManager a;
+    a.list();
     return 0;
 }
