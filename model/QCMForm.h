@@ -19,6 +19,10 @@ class QCMForm
 
 
     public:
+        void EnTete()
+        {
+
+        };
         void QCM()
         {
 
@@ -31,7 +35,7 @@ class QCMForm
         {
 
         };
-        
+    
 
 
 

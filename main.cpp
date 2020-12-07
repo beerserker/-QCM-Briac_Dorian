@@ -78,8 +78,9 @@ int main(void)
     c.setpath(fichier);
     QCM qcm2 = c.open();
     c.save(qcm2);
- */
+ 
     QCMManager a;
     a.list();
     return 0;
+    */
 }
