@@ -11,14 +11,14 @@
 #include "QCMfille.h"
 #include <dirent.h>
 
-#define QCM_PATH "E:\\projects\\-QCM-Briac_Dorian\\QCM/"
+#define QCM_PATH "C:\\Projet_BTS\\-QCM-Briac_Dorian\\QCM\\"
 using namespace std;
 
 QCMManager::QCMManager(){};
 
-vector<QCMfille> QCMManager::list()
+void QCMManager::list()
 {
-    vector<QCMfille> vec;
+    
     QCMfille st;
     string t;
     int i;
@@ -36,13 +36,13 @@ vector<QCMfille> QCMManager::list()
             {
                 t = QCM_PATH + t;
                 st.setpath(t);
-                vec.push_back(st);
+                QCMlist.push_back(st);
             }
         }
         closedir(dr);
     }
 
-    return vec;
+    
 }
 
 

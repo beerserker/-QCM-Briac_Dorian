@@ -11,7 +11,7 @@
 #include "QCMfille.h"
 
 using namespace std;
-#define QCM_PATH "E:\\projects\\-QCM-Briac_Dorian\\QCM"
+//#define QCM_PATH "E:\\projects\\-QCM-Briac_Dorian\\QCM\\"
 
 bool QCMfille::save(QCM quest)
 {
@@ -20,7 +20,7 @@ bool QCMfille::save(QCM quest)
     try
     {
 
-        file.open(QCM_PATH);
+        file.open(path);
         file << "\"QCM\";\"" << quest.getTitle() << "\"\n";
 
         vector<Question> vQuest = quest.getQuestions();
@@ -52,9 +52,9 @@ QCM QCMfille::open()
     Answer ans;
     Question quest;
     int sizeQ, sizeA;
-    path=QCM_PATH+path;
-    ifstream file(path);
-    if (file)
+    //path=QCM_PATH+path;
+    ifstream file;file.open(path);
+    if (file.is_open())
     {
 
         string contenu;
@@ -64,14 +64,14 @@ QCM QCMfille::open()
             if (line[0] == "QCM")
             {
                 qcm.setTitle(line[1]);
-                cout << qcm.getTitle() << endl;
+                //cout << qcm.getTitle() << endl;
             }
             if (line[0] == "Q")
             {
                 quest.getTitle();
                 quest.setTitle(line[1]);
                 sizeQ = qcm.addQuestion(quest);
-                cout << quest.getTitle() << endl;
+                //cout << quest.getTitle() << endl;
             }
             if (line[0] == "A")
             {
@@ -79,7 +79,7 @@ QCM QCMfille::open()
                 sizeA = quest.addAnswer(ans);
                 bool b=(line[2]=="1");
                 ans.setIsAnswer(b);
-                cout << ans.getTitle() <<" "<<ans.getIsAnswer()<< endl;
+                //cout << ans.getTitle() <<" "<<ans.getIsAnswer()<< endl;
             }
         }
 

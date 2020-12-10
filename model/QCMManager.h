@@ -16,11 +16,12 @@ class QCMManager
     private :
     string path;
     vector <string> split(string);
+    
 
     public :
     QCMManager();
-    
-    vector<QCMfille> list();
+    vector <QCMfille> QCMlist;
+    void list();
     bool save(QCM);
     QCM open(string name);
     

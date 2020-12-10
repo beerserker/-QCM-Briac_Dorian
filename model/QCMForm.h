@@ -12,21 +12,22 @@
 #include <filesystem>
 #include "QCMfille.h"
 #include <dirent.h>
-#define QCM_PATH "E:\\projects\\-QCM-Briac_Dorian\\QCM/"
+
 #define LINE 80
 class QCMForm
 {
 private:
 
 public:
+void faireQCM(QCM);
 void affListe(vector<QCMfille>);
     void EnTete()
     {
         QCMForm line;
         line.Line();
-        cout<<" c'est les qcm de bribri !"<<endl;
+        cout<<"\n|                          c'est les qcm de bribri !                           |"<<endl;
         line.Line();
-    
+        cout<<endl;
     };
     void QCM(){
 

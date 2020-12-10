@@ -10,6 +10,7 @@
 #include <filesystem>	
 #include "QCMfille.h"
 #include "QCMForm.h"
+#include <windows.h>
 using namespace std;
 
 int main(void)
@@ -84,16 +85,24 @@ int main(void)
     a.list();
     return 0;
     */
-
+   system("cls");
     QCMForm form;
     QCMfille fille;
-    
+    QCM qchoisi;
     vector <QCMfille> vec;
     QCMManager list;
     form.EnTete();
-    vec=list.list();
-    form.affListe(vec);
-    fille.open();
+    
+    list.list();
+    cout<<" liste des QCM disponible"<<endl;
+    form.affListe(list.QCMlist);
+    cout<<"\nvotre choix :";
+    int choix;
+    cin>>choix;
+    fille.setpath((list.QCMlist[choix-1]).getpath());
+    qchoisi=fille.open();
+    form.faireQCM(qchoisi);
+    
 
 
 
