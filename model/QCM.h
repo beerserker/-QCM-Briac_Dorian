@@ -6,7 +6,7 @@
 using namespace std;
 
 class QCM {
-    private :
+    protected :
         string title;
         vector<Question> questions;
     public :

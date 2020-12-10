@@ -10,6 +10,7 @@
 #include <filesystem>
 #include "QCMfille.h"
 #include <dirent.h>
+
 #define QCM_PATH "E:\\projects\\-QCM-Briac_Dorian\\QCM/"
 using namespace std;
 
@@ -43,3 +44,5 @@ vector<QCMfille> QCMManager::list()
 
     return vec;
 }
+
+

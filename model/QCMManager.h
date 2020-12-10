@@ -1,3 +1,6 @@
+
+#ifndef QCMManager_h
+#define QCMManager_h
 #include <string>
 #include <vector>
 #include "QCM.h"
@@ -21,6 +24,8 @@ class QCMManager
     bool save(QCM);
     QCM open(string name);
     
+    
 
 };
 
+#endif
