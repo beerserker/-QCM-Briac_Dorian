@@ -17,7 +17,7 @@ class QCMfille : public QCM
     public:
     
     bool save(QCM);
-    QCM open();
+    void open();
     void setpath(string chemin){path=chemin;};
     string getpath(){return path;};
 

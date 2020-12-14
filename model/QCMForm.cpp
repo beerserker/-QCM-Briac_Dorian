@@ -15,13 +15,11 @@
 #define QCM_PATH "C:\\Projet_BTS\\-QCM-Briac_Dorian\\QCM\\"
 using namespace std;
 
-void faireQCM(QCM qchoisi)
+void QCMForm::faireQCM(QCM qchoisi)
 {
     vector<Question> question;
     vector <Answer> answer;
 
-    Question quest;
-    Answer ans;
     int sizeq,sizea,point=0,rep;
     bool b;
     
@@ -30,36 +28,41 @@ void faireQCM(QCM qchoisi)
     sizeq= question.size();
     for(int i=0;i<sizeq;i++)
     {
-        quest=question[i];
-        cout<<"\n"<<quest.getTitle()<<endl;
-        answer=quest.getAnswers();
+        affQUESTION(question[i].getTitle());
+        //cout<<"\n"<<question[i].getTitle()<<endl;
+        answer=question[i].getAnswers();
         sizea=answer.size();
         for(int y=0;y<sizea;y++)
         {
-            ans=answer[y];
-            cout<<"\n"<<y+1<<"- "<<ans.getTitle();
+            cout<<"\n"<<y+1<<"- "<<answer[y].getTitle();
             
         }
-        cout<<"n votre reponse :";
+        cout<<"\nvotre reponse :";
         cin>>rep;
         b=answer[rep-1].getIsAnswer();
         if(b)
         {
+            cout<<"vrai !";
            point++; 
         }
-
+        else
+        {
+            cout<<"faux !";
+        }
+        
+        getch();
 
     }
-    cout<<"\n vous avez reussi "<<point<<" questions sur "<<sizeq<<"questions !"<<endl;
+    cout<<"\n vous avez reussi "<<point<<" questions sur "<<sizeq<<" questions !"<<endl;
 }
 
 void QCMForm::affListe(vector<QCMfille> vec)
 {
     int taille = vec.size();
-    cout << "taille = " << taille << endl;
+    
     for (int i = 0; i < taille; i++)
     {
-        cout << "fichier n°" << i + 1 << endl;
+        cout << "fichier n" << i + 1 << endl;
         string path = vec[i].getpath();
 
         ifstream file;

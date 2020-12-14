@@ -46,12 +46,12 @@ bool QCMfille::save(QCM quest)
     return false;
 }
 
-QCM QCMfille::open()
+void QCMfille::open()
 {
-    QCM qcm;
+    
     Answer ans;
     Question quest;
-    int sizeQ, sizeA;
+    
     //path=QCM_PATH+path;
     ifstream file;file.open(path);
     if (file.is_open())
@@ -63,23 +63,35 @@ QCM QCMfille::open()
             vector<string> line = split(contenu);
             if (line[0] == "QCM")
             {
-                qcm.setTitle(line[1]);
+                setTitle(line[1]);
                 //cout << qcm.getTitle() << endl;
             }
             if (line[0] == "Q")
             {
-                quest.getTitle();
+               if((quest.getTitle())!="noTitle")
+               {
+                    addQuestion(quest);
+                    quest=Question();
+               }
                 quest.setTitle(line[1]);
-                sizeQ = qcm.addQuestion(quest);
+                
                 //cout << quest.getTitle() << endl;
             }
             if (line[0] == "A")
             {
                 ans.setTitle(line[1]);
-                sizeA = quest.addAnswer(ans);
                 bool b=(line[2]=="1");
                 ans.setIsAnswer(b);
+                quest.addAnswer(ans);
                 //cout << ans.getTitle() <<" "<<ans.getIsAnswer()<< endl;
+            }
+             if (line[0] == "END")
+            {
+               if(quest.getTitle()!="noTitle")
+               {
+                    addQuestion(quest);
+                    quest=Question();
+               }
             }
         }
 
@@ -89,7 +101,7 @@ QCM QCMfille::open()
     {
         cerr << "Erreur, impossible d'ouvrir le fichier !" << endl;
     }
-    return qcm;
+    
 }
 vector<string> QCMfille::split(string line)
 {

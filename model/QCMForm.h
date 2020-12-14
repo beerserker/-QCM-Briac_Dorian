@@ -12,7 +12,7 @@
 #include <filesystem>
 #include "QCMfille.h"
 #include <dirent.h>
-
+#include <conio.h>
 #define LINE 80
 class QCMForm
 {
@@ -23,27 +23,41 @@ void faireQCM(QCM);
 void affListe(vector<QCMfille>);
     void EnTete()
     {
-        QCMForm line;
-        line.Line();
-        cout<<"\n|                          c'est les qcm de bribri !                           |"<<endl;
-        line.Line();
+        
+        cout<<"╔";
+        Line();
+        cout<<"╗";        
+        cout<<"\n╠                          c'est les qcm de bribri !                           ╢"<<endl;
+        cout<<"╚";
+        Line();
+        cout<<"╝";
         cout<<endl;
     };
-    void QCM(){
+    void affQCM(){
 
     };
-    void QUESTION(){
-
+    void affQUESTION(string t){
+        system("cls");
+        int i;
+        cout<<endl;
+        Line();cout << "═";cout << "═"<<endl;
+        for (i = 0; i < (LINE/2); i++)
+        {
+            cout<<"┈┈";
+        }
+        
+        cout<<"\n"<<t<<endl;
+        
     };
-    void ANSWER(){
+    void affANSWER(){
 
     };
     void Line()
     {
         int i;
-        for (i = 0; i < LINE; i++)
+        for (i = 0; i < (LINE-2); i++)
         {
-            cout << "-";
+            cout << "═";
         }
     };
     

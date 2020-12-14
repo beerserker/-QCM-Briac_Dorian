@@ -7,15 +7,15 @@
 #include <fstream>
 #include <sstream>
 #include "QCMManager.h"
-#include <filesystem>	
+#include <filesystem>
 #include "QCMfille.h"
 #include "QCMForm.h"
-#include <windows.h>
+#include <Windows.h>
 using namespace std;
 
 int main(void)
 {
-   /* Answer a("titre : reponse 1", 0);
+    /* Answer a("titre : reponse 1", 0);
     Answer a1("titre : reponse 2", 1);
     Answer a2("titre : reponse 3", 0);
     Question Q0("titre : question 0");
@@ -85,53 +85,26 @@ int main(void)
     a.list();
     return 0;
     */
-   system("cls");
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    system("cls");
     QCMForm form;
     QCMfille fille;
     QCM qchoisi;
-    vector <QCMfille> vec;
+    vector<QCMfille> vec;
     QCMManager list;
     form.EnTete();
-    
+
     list.list();
-    cout<<" liste des QCM disponible"<<endl;
+    cout << " liste des QCM disponible" << endl;
     form.affListe(list.QCMlist);
-    cout<<"\nvotre choix :";
+    cout << "\nvotre choix :";
     int choix;
-    cin>>choix;
-    fille.setpath((list.QCMlist[choix-1]).getpath());
-    qchoisi=fille.open();
-    form.faireQCM(qchoisi);
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    cin >> choix;
+    fille.setpath((list.QCMlist[choix - 1]).getpath());
+    fille.open();
+    form.faireQCM(fille);
 }
-
 
 /*!
  * \fn          int setConsoleScreenBufferInfo(COORD dwSize)
@@ -146,25 +119,25 @@ int main(void)
 //     COORD bakDwSize = dwSize ;
 //     SMALL_RECT srctWindow ;
 //     CONSOLE_SCREEN_BUFFER_INFO csbiInfo ;
- 
+
 //     // Obtenir les informations de la console
 //     if(!GetConsoleScreenBufferInfo(hConsoleOutput, &csbiInfo)) return EXIT_FAILURE ;
- 
+
 //     // Adapter le buffer de la console en fonction des tailles maximales
 //     dwSize.X = (dwSize.X>csbiInfo.srWindow.Right)?dwSize.X:csbiInfo.dwSize.X ;
 //     dwSize.Y = (dwSize.Y>csbiInfo.srWindow.Bottom)?dwSize.Y:csbiInfo.dwSize.Y ;
 //     if(!SetConsoleScreenBufferSize(hConsoleOutput, dwSize)) return EXIT_FAILURE ;
- 
+
 //     // Modifier la taille de la console
 //     dwSize = bakDwSize ;
 //     srctWindow = csbiInfo.srWindow ;
 //     srctWindow.Right = dwSize.X - 1 ;
 //     srctWindow.Bottom = dwSize.Y - 1 ;
 //     if(!SetConsoleWindowInfo(hConsoleOutput, TRUE, &srctWindow)) return EXIT_FAILURE ;
- 
+
 //     // Adapter la taille du buffer de la console à sa taille (pas d'ascenseurs)
 //     dwSize = bakDwSize ;
 //     if(!SetConsoleScreenBufferSize(hConsoleOutput, dwSize)) return EXIT_FAILURE ;
- 
+
 //     return EXIT_SUCCESS ;
 // }
